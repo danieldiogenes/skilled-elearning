@@ -6,96 +6,95 @@
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 16px;
-  line-height: 26px;
   font-weight: 500;
+  line-height: 26px;
 }
 
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 16px 16px 0 16px;
   margin-bottom: 38px;
 }
 
-.logo-header {
+.header__logo {
   width: 89px;
 }
 
-.btn-header {
-  font-family: inherit;
-  font-size: inherit;
+.header__button {
   background-color: #13183F;
-  color: white;
-  font-weight: 700;
   padding: 9px 24px 11px 24px;
   border-radius: 28px;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  color: white;
   cursor: pointer;
   border: none;
-  font-style: normal;
-  line-height: 28px;
   transition: background-color 0.3s ease;
 }
 
-.btn-header:hover {
+.header__button:hover {
   background-color: #666CA3;
 }
 
 .presentation {
   display: flex;
-  flex-direction: column;
   align-items: start;
+  flex-direction: column;
   padding-left: 16px;
   padding-right: 16px;
 }
 
-.presentation-tittle {
-  color: #13183F;
+.presentation__tittle {
   font-size: 40px;
-  font-weight: 800;
   font-style: normal;
+  font-weight: 800;
+  color: #13183F;
   line-height: normal;
   margin-bottom: 26px;
 }
 
-.text-description {
-  color: #83869A;
+.presentation__description {
   font-style: normal;
+  color: #83869A;
   margin-bottom: 24px;
-  overflow: visible;
 }
 
-.btn-presentation {
-  font-family: inherit;
-  font-size: inherit;
+.presentation__button {
   background: linear-gradient(to bottom, #FF6F48, #F02AA6);
-  color: white;
-  font-weight: 700;
   padding: 15px 37px 15px 38px;
   border-radius: 28px;
+  margin-bottom: 25px;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: white;
   cursor: pointer;
   border: none;
-  font-style: normal;
-  line-height: normal;
-  margin-bottom: 25px;
   position: relative;
 }
 
-.btn-presentation::before {
+.presentation__button::before {
   content: '';
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 28px;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 28px;
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
 }
 
-.btn-presentation:hover::before {
+.presentation__button:hover::before {
   opacity: 1;
 }
 
@@ -104,106 +103,116 @@ body {
   max-width: 425px;
 }
 
-.img-tablet {
+.presentation__img--tablet {
   display: none;
   z-index: -1;
 }
 
-.img-desktop {
+.presentation__img--desktop {
   display: none;
   z-index: -1;
 }
 
 .courses {
-  background: linear-gradient(to bottom, #FFFFFF, #F0F1FF);
   display: grid;
   grid-template-columns: 1fr;
+  background: linear-gradient(to bottom, #FFFFFF, #F0F1FF);
   gap: 40px;
   padding-left: 16px;
   padding-right: 16px;
 }
 
 ul {
-  list-style: none;
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
   margin-bottom: 80px;
+  list-style: none;
 }
 
 ul h3 {
   background: linear-gradient(to bottom, #FF6F48, #F02AA6);
   padding: 24px 29px 32px 28px;
-  color: white;
+  border-radius: 10px;
   font-size: 24px;
   font-style: normal;
   font-weight: 800;
   line-height: 32px;
-  border-radius: 10px;
+  color: white;
 }
 
-.course-card {
+.course__card {
+  display: flex;
+  flex-direction: column;
   background-color: white;
-  border-radius: 10px;
   padding: 0px 29px 32px 28px;
+  border-radius: 10px;
 }
 
-.course-card img {
+.course__card img {
   position: relative;
   top: -25px;
+  max-width: 56px;
 }
 
-.course-tittle {
-  color: #13183F;
+.course__card--tittle {
+  margin-bottom: 16px;
   font-size: 20px;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
-  margin-bottom: 16px;
+  color: #13183F;
 }
 
-.link {
-  text-decoration: none;
-  color: #F74780;
+.course__card--description {
+  flex-grow: 1;
+  font-style: normal;
+  color: #83869A;
+  margin-bottom: 24px;
+}
+
+.course__card--link {
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 28px;
+  color: #F74780;
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.link:hover {
+.course__card--link:hover {
   color: #FFA7C3;
 }
 
 .footer {
-  background-color: #13183F;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  background-color: #13183F;
   padding: 36px 16px;
 }
 
-.logo-footer {
+.footer__logo {
   width: 89px;
 }
 
-.btn-footer {
-  font-family: inherit;
-  font-size: inherit;
+.footer__button {
   background: linear-gradient(to bottom, #4851FF, #F02AA6);
-  color: white;
-  font-weight: 700;
   padding: 9px 24px 11px 24px;
   border-radius: 28px;
-  cursor: pointer;
   border: none;
+  font-family: inherit;
+  font-size: inherit;
   font-style: normal;
+  font-weight: 700;
   line-height: 28px;
+  color: white;
+  cursor: pointer;
   position: relative;
 }
 
-.btn-footer::before {
+.footer__button::before {
   content: '';
   position: absolute;
   top: 0;
@@ -217,7 +226,7 @@ ul h3 {
   pointer-events: none;
 }
 
-.btn-footer:hover::before {
+.footer__button:hover::before {
   opacity: 1;
 }
 
@@ -228,17 +237,17 @@ ul h3 {
   }
 
   .presentation {
-    padding-left: 39px;
-    padding-right: 0;
     display: grid;
     grid-template-columns: 1fr auto;
+    padding-left: 39px;
+    padding-right: 0;
   }
 
   .presentation div {
     max-width: 398px;
   }
 
-  .presentation .text-description {
+  .presentation__description {
     margin-right: -60px;
   }
 
@@ -246,7 +255,7 @@ ul h3 {
     display: none;
   }
 
-  .img-tablet {
+  .presentation__img--tablet {
     display: block;
     width: 100%;
     max-width: 385px;
@@ -269,7 +278,7 @@ ul h3 {
     padding: 56px 21px 139px 32px;
   }
 
-  .course-card {
+  .course__card {
     padding: 0px 21px 32px 32px;
   }
 
@@ -281,65 +290,61 @@ ul h3 {
 @media (min-width: 1440px) {
   .header {
     padding: 24px 165px 0 165px;
-    margin-bottom: 99px;
   }
 
-  .logo-header {
+  .header__logo {
     width: 114px;
   }
 
-  .btn-header {
+  .header__button {
     padding: 14px 31px 14px 32px;
     font-size: 18px;
   }
 
   .presentation {
-    padding-left: 165px;
-    padding-right: 0;
     display: grid;
     grid-template-columns: 1fr auto;
+    padding-left: 165px;
+    padding-right: 0;
   }
 
   .presentation div {
     max-width: 457px;
   }
 
-  .presentation-tittle {
+  .presentation__tittle {
     font-size: 56px;
     margin-bottom: 29px;
   }
 
-  .text-description {
+  .presentation__description {
+    width: 445px;
     font-size: 18px;
     line-height: 28px;
-  }
-
-  .presentation .text-description {
     margin-right: 0px;
-    width: 445px;
     margin-bottom: 40px;
   }
 
-  .img-tablet {
+  .presentation__img--tablet {
     display: none;
   }
 
-  .img-desktop {
+  .presentation__img--desktop {
     display: block;
     width: 100%;
     max-width: 650px;
     margin-top: -185px;
   }
 
-  .btn-presentation {
-    font-family: inherit;
-    font-size: 18px;
-    font-weight: 700;
+  .presentation__button {
     padding: 19px 31px 16px 32px;
     border-radius: 31.5px;
-    font-style: normal;
-    line-height: 28px;
     margin-bottom: 250px;
+    font-family: inherit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
   }
 
   .courses {
@@ -359,26 +364,31 @@ ul h3 {
     line-height: 40px;
   }
 
-  .course-card {
+  .course__card {
     padding: 0px 32px 40px 32px;
     box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442);
   }
 
-  .course-tittle {
+  .course__card--tittle {
     font-size: 24px;
     line-height: 30px;
     margin-bottom: 24px;
+  }
+
+  .course__card--description {
+    font-size: 18px;
+    line-height: 28px;
   }
 
   .footer {
     padding: 32px 165px;
   }
 
-  .logo-footer {
+  .footer__logo {
     width: 114px;
   }
 
-  .btn-footer {
+  .footer__button {
     padding: 14px 31px 14px 32px;
     font-size: 18px;
   }
